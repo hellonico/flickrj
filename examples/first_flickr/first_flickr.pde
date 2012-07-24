@@ -5,7 +5,10 @@
 import processing.video.*;
 import javax.imageio.*;
 import java.awt.image.*;
+
+import com.aetrion.flickr.auth.*;
 import com.aetrion.flickr.*;
+import com.aetrion.flickr.uploader.*;
 
 // Fill in your own apiKey and secretKey values.
 String apiKey = "3adbd93e465941c9836c19d31b5e1669";
@@ -43,11 +46,11 @@ void setup() {
 }
 
 void draw() {
-  if (cam.available()) {
+  //if (cam.available()) {
     cam.read();
     image(cam, 0, 0);
     text("Click to upload to Flickr", 10, height - 13);
-  }
+  //}
 }
 
 void mousePressed() {
