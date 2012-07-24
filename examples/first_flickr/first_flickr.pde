@@ -27,6 +27,7 @@ void setup() {
 
   // Set up the camera.
   cam = new Capture(this, 320, 240);  
+  cam.start();
 
   // Set up Flickr.
   flickr = new Flickr(apiKey, secretKey, (new Flickr(apiKey)).getTransport());
@@ -46,11 +47,11 @@ void setup() {
 }
 
 void draw() {
-  //if (cam.available()) {
+  if (cam.available()) {
     cam.read();
     image(cam, 0, 0);
     text("Click to upload to Flickr", 10, height - 13);
-  //}
+  }
 }
 
 void mousePressed() {
