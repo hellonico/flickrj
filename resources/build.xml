@@ -1,4 +1,4 @@
-<project name="ProcessingLibs" default="clean" basedir="../">
+<project name="flickr" default="clean" basedir="../">
 
     
 <!--	
